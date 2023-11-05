@@ -1,11 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import LoginReg from "./components/pages/auth/LoginReg";
-import ResetPassword from "./components/pages/auth/ResetPassword";
-import SendPasswordResetEmail from "./components/pages/auth/SendPasswordResetEmail";
-import Contact from "./components/pages/Contact";
-import Dashboard from "./components/pages/Dashboard";
-import Home from "./components/pages/Home";
-import Layout from "./components/pages/Layout";
+import LoginReg from "./components/pages/auth/LoginReg.js";
+// import ResetPassword from "./components/pages/auth/ResetPassword.js";
+// import SendPasswordResetEmail from "./components/pages/auth/SendPasswordResetEmail.js";
+import Contact from "./components/pages/Contact.js";
+import Dashboard from "./components/pages/Dashboard.js";
+import Home from "./components/pages/Home.js";
+import Layout from "./components/pages/Layout.js";
+import Brewery from "./components/pages/Brewery.jsx";
 
 function App() {
   return (
@@ -16,10 +17,11 @@ function App() {
             <Route index element={<Home />} />
             <Route path="contact" element={<Contact />} />
             <Route path="login" element={<LoginReg />} />
-            <Route path="sendpasswordresetemail" element={<SendPasswordResetEmail />} />
-            <Route path="reset" element={<ResetPassword />} />
+            {/* <Route path="sendpasswordresetemail" element={<SendPasswordResetEmail />} /> */}
+            {/* <Route path="reset" element={<ResetPassword />} /> */}
           </Route>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/brewery" element={<Brewery />} />
           <Route path="*" element={<h1>Error 404 Page not found !!</h1>} />
         </Routes>
       </BrowserRouter>
